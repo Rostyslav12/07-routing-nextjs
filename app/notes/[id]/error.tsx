@@ -1,18 +1,22 @@
+
 "use client";
 
-interface ErrorProps {
+interface NoteDetailsErrorProps {
   error: Error & { digest?: string };
   reset: () => void;
 }
 
-export default function Error({
+export default function NoteDetailsError({
   error,
-}: ErrorProps) {
+  reset,
+}: NoteDetailsErrorProps) {
   return (
-    <div>
-      <p>
-        Could not fetch note details. {error.message}
-      </p>
+    <div role="alert">
+      <h2>Failed to load note details.</h2>
+      <p>{error.message}</p>
+      <button type="button" onClick={reset}>
+        Try again
+      </button>
     </div>
   );
 }

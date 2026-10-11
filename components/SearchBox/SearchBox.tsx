@@ -1,6 +1,7 @@
+
 "use client";
 
-import css from "./SearchBox.module.css";
+import styles from "./SearchBox.module.css";
 
 interface SearchBoxProps {
   value: string;
@@ -13,9 +14,10 @@ export default function SearchBox({
 }: SearchBoxProps) {
   return (
     <input
-      className={css.input}
-      type="text"
-      placeholder="Search notes"
+      className={styles.input}
+      type="search"
+      aria-label="Search notes"
+      placeholder="Search notes..."
       value={value}
       onChange={(event) => onChange(event.target.value)}
     />

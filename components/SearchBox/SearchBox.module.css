@@ -1,16 +1,16 @@
+
 .input {
   width: 100%;
-  max-width: 400px;
-
+  max-width: 360px;
   padding: 10px 14px;
-
-  border: 1px solid #d1d5db;
-  border-radius: 6px;
-
-  font-size: 16px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  font: inherit;
+  background: #fff;
+  color: #202124;
 }
 
 .input:focus {
-  outline: 2px solid #2563eb;
-  outline-offset: 1px;
+  outline: 2px solid #646cff;
+  outline-offset: 2px;
 }

@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 
 import Header from "../components/Header/Header";
@@ -11,22 +12,26 @@ export const metadata: Metadata = {
   description: "Application for managing personal notes",
 };
 
+interface RootLayoutProps {
+  children: React.ReactNode;
+  modal: React.ReactNode;
+}
+
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+  modal,
+}: Readonly<RootLayoutProps>) {
   return (
-    <html lang="en">
+    <html lang="uk">
       <body>
         <TanStackProvider>
           <div className="page">
             <Header />
-
             <main className="content">{children}</main>
-
             <Footer />
           </div>
+
+          {modal}
         </TanStackProvider>
       </body>
     </html>
